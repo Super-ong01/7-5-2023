@@ -7,7 +7,7 @@ VALUES ('$_POST[firstname]','$_POST[lastname]','$_POST[email]','$_POST[phone]','
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
 } else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
+  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
 $conn->close();
