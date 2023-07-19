@@ -6,6 +6,7 @@ VALUES ('$_POST[firstname]','$_POST[lastname]','$_POST[email]','$_POST[phone]','
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
+  header("lacation: member_show.php");#เปลี่ยนหน้าอัตโนมัติโดยไม่ต้องกดย้อนกลับ
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
