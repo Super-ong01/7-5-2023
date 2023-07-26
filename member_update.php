@@ -15,6 +15,11 @@ $sql ="UPDATE tbl_member SET
     WHERE id='$_GET[id]' ";
 
 if (mysqli_query($conn,$sql)) {
+    if (copy($tempname, $folder)) {
+        echo "อับโหลดรูปได้แล้ว";
+      } else {
+        echo "อับโหลดรูปไม่ได้";
+      }
     echo"deleting done";
     header("location: member_show.php");
 } else {
