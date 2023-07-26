@@ -15,7 +15,7 @@ $row = mysqli_fetch_assoc($result)
 email <input type = "email" name="email"value="<?php echo $row[email]; ?>"/> <br/>
 เบอร์โทร <input type = "text" name="phone"value="<?php echo $row[phone]; ?>"/> <br/>
 ที่อยู่ <textarea name = "address"><?php echo $row[address]; ?></textarea><br/>
-เเนบรูป <input type = "file" name="photo"/> <br/>
+เเนบรูป <input type = "file" name="photo"value="<?php echo $row[photo]; ?>"/><br/><br/>
 <input type = "submit" value="บันทึกข้อมูล"/>
 </form>
 </div>
